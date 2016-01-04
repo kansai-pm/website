@@ -1,0 +1,6 @@
+[submodule "kansai-pm.github.io"]
+	path = kansai-pm.github.io
+	url = git@github.com:kansai-pm/kansai-pm.github.io.git
+[submodule "blog"]
+	path = blog
+	url = git@github.com:kansai-pm/kansai-pm.github.io.git
