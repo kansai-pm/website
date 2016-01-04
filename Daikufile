@@ -4,7 +4,18 @@ task setup => sub {
     sh q{git submodule update};
 };
 
-desc 'deploy';
+desc 'add new entry';
+task new => sub {
+    undef $ENV{EDITOR};
+    sh q{carton exec -- riji new-entry};
+};
+
+desc 'start local server';
+task serve => sub {
+    sh q{carton exec -- riji server};
+};
+
+desc 'deploy to kansai.pm.org';
 task deploy => sub {
     sh q{carton exec -- riji publish};
     sh q{cd blog && git add . && git commit --message='auto update by `website`' && git push origin master};
