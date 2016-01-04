@@ -1,0 +1,14 @@
+desc 'setup';
+task setup => sub {
+    sh q{carton install};
+    sh q{git submodule update};
+};
+
+desc 'deploy';
+task deploy => sub {
+    sh q{carton exec -- riji publish};
+    sh q{cd blog && git commit --all --message='update' && git push origin master};
+    sh q{git commit --all --message='riji publish' && git push origin master};
+};
+
+task default => sub { sh q{daiku -T} };
