@@ -7,8 +7,8 @@ task setup => sub {
 desc 'deploy';
 task deploy => sub {
     sh q{carton exec -- riji publish};
-    sh q{cd blog && git commit --all --message='update' && git push origin master};
-    sh q{git commit --all --message='riji publish' && git push origin master};
+    sh q{cd blog && git add . && git commit --message='auto update by `website`' && git push origin master};
+    sh q{git add . && git commit --message='riji publish' && git push origin master};
 };
 
 task default => sub { sh q{daiku -T} };
