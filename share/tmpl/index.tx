@@ -1,30 +1,52 @@
-: cascade base
-: around content -> {
-<nav>
-  <ul>
-    <li><a href="<: '/about.html' | uri_for :>">About</a></li>
-    <li><a href="<: '/archives.html' | uri_for :>">Archives</a></li>
-  </ul>
-</nav>
-:   for $blog.entries(limit => 10) -> $entry {
-<article>
-  <h1><a href="<: $entry.site_path | uri_for :>"><: $entry.title :></a></h1>
-  <aside class="text-right">
-    <time pubdate><: $entry.published_at().strftime('%Y-%m-%d %H:%M') :></time>
-  </aside>
-  <: $entry.html_body_without_title() | mark_raw :>
-</article>
-:   }
-:   if $blog.tags().size() {
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h3 class="panel-title">tags</h3>
-  </div>
-  <div class="panel-body">
-  :     for $blog.tags() -> $tag {
-  <a href="<: $tag.site_path | uri_for :>" class="btn btn-default"><: $tag.name :> <span class="badge"><: $tag.count :></span></a>
-  :      }
-  </div>
-</div>
-:   }
+: cascade outer
+
+: around section -> {
+<header class="container-fluid">
+    <h1>
+        <: $blog.title :>
+    </h1>
+    <h2>
+        <img src="<: '/static/kansaipm.gif' | uri_for :>" alt="<: $blog.title :>" class="img-thumbnail">
+    </h2>
+</header>
+<section class="container-fluid">
+    <nav>
+        <ul>
+            <li><a href="<: '/about.html' | uri_for :>">About</a></li>
+            <li><a href="<: '/archives.html' | uri_for :>">Archives</a></li>
+        </ul>
+    </nav>
+    : for $blog.entries(limit => 10) -> $entry {
+    <article>
+        <h1>
+            <a href="<: $entry.site_path | uri_for :>">
+                <: $entry.title :>
+            </a>
+        </h1>
+        <aside class="text-right">
+            <time pubdate>
+                <: $entry.published_at().strftime( '%Y-%m-%d %H:%M') :>
+            </time>
+        </aside>
+        <: $entry.html_body_without_title() | mark_raw :>
+    </article>
+    : }
+    : if $blog.tags().size() {
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">tags</h3>
+        </div>
+        <div class="panel-body">
+            : for $blog.tags() -> $tag {
+            <a href="<: $tag.site_path | uri_for :>" class="btn btn-default">
+                <: $tag.name :>
+                    <span class="badge">
+                        <: $tag.count :>
+                    </span>
+            </a>
+            : }
+        </div>
+    </div>
+    : }
+</section>
 : }
