@@ -18,6 +18,7 @@ task serve => sub {
 
 desc 'deploy to kansai.pm.org';
 task deploy => sub {
+    sh q{cd blog && git checkout master && git pull origin master};
     sh q{carton exec -- riji publish};
     sh q{cd blog && git add . && git commit --message='auto update by `website`' && git push origin master};
     sh q{git add . && git commit --message='riji publish' && git push origin master};
