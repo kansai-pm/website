@@ -2,6 +2,7 @@ desc 'setup';
 task setup => sub {
     sh q{carton install};
     sh q{git submodule update};
+    sh q{cd blog && git checkout master && git pull origin master};
 };
 
 desc 'add new entry';
