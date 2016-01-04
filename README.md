@@ -1,31 +1,53 @@
-1st step -- configuration
---------
+# kansai.pm.org
 
-Edit your 'riji.yml'.
+`kansai.pm.org`のウェブサイトのビルドシステムです。
 
-2nd step -- create your blog entry
---------
+[Riji](https://github.com/Songmu/p5-Riji)を使用しています。
 
-Edit your blog entry by markdown notation, save into 'article/entry' and git commit it.
-`riji new-entry` sub command is also available helping you to create new entry easily.
+# 使い方
 
-3rd step -- confirmation
---------
+## 初期設定
 
-You can see the blog at local environment by using built in server as following step.
+CartonおよびDaikuを使用します。必要に応じてインストールしてください。
 
-    % riji server
+```
+$ cpanm Carton Daiku
+```
 
-4th step -- publish your entry
---------
+githubからcloneしたあと、`daiku setup`で環境を整えます。（必要なモジュールはプロジェクトのディレクトリにインストールされます。）
 
-You can publish static blog directory as follows.
+```
+$ git clone https://github.com/kansai-pm/website.git
+$ cd /path/to/website
+$ daiku setup
+```
 
-    % riji publish
+## 記事の作成
 
-'blog/' directory is created. Now, you can publish it to any servers.
+新しい記事を作成するには`daiku new`を実行します。
 
-5th step -- customize
---------
+```
+$ daiku new
+```
 
-You can customize your blog design by editing template, css, js or etc in share directory.
+Markdownのファイルが作成されますので、そのファイルを編集してください。
+
+## 記事を確認
+
+記事を作成したら、ローカル環境で正しく表示されているか確認してください。
+
+```
+$ daiku serve
+```
+
+記事の作成者などは公開時に自動で設定されますので、空欄になっていても問題ありません。
+
+## 記事を公開
+
+記事を確認して問題なければ、記事を公開してください。
+
+```
+$ daiku deploy
+```
+
+リポジトリの状態も自動的に更新され、githubにpushされます。
