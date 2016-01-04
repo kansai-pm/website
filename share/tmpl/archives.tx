@@ -1,0 +1,17 @@
+: cascade base
+
+: around title -> {
+Archives | <: $blog.title :>
+: }
+
+: around content -> {
+<h1>Archives</h1>
+<ul class="archives">
+: for $blog.entries() -> $entry {
+  <li>
+      <time><: $entry.published_at.strftime('%Y-%m-%d') :></time>
+      <a href="<: $entry.site_path() | uri_for :>"><: $entry.title :></a>
+  </li>
+: }
+</ul>
+: }
