@@ -1,12 +1,21 @@
-: cascade outer
+: cascade outer 
 
 : around section -> {
-<header class="container-fluid">
-    <h1>
-        <a href="<: '/' | uri_for :>"><: $blog.title :></a>
-    </h1>
-</header>
-<section class="container-fluid">
-    : block content -> { }
-</section>
+<div class="container">
+    <div class="row">
+        <h1>
+            <a href="<: '/' | uri_for :>">
+                <: $blog.title :>
+            </a>
+        </h1>
+        <div class="row">
+            <section class="col-md-8">
+                : block content -> { }
+            </section>
+            <section class="col-md-4">
+                : include 'sidebar.tx' {}
+            </section>
+        </div>
+    </div>
+</div>
 : }

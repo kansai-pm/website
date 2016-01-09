@@ -1,0 +1,31 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Menu</h3>
+    </div>
+    <div class="panel-body">
+        <nav>
+            <ul>
+                <li><a href="<: '/about.html' | uri_for :>">About</a></li>
+                <li><a href="<: '/archives.html' | uri_for :>">Archives</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+: if $blog.tags().size() {
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Tags</h3>
+    </div>
+    <div class="panel-body">
+        : for $blog.tags() -> $tag {
+        <a href="<: $tag.site_path | uri_for :>" class="btn btn-default">
+            <: $tag.name :>
+                <span class="badge">
+                    <: $tag.count :>
+                </span>
+        </a>
+        : }
+    </div>
+</div>
+: }

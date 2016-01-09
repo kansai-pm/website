@@ -1,0 +1,15 @@
+<article>
+    <div class="page-header">
+        <h1>
+            <a href="<: $entry.site_path | uri_for :>">
+                <: $entry.title :>
+            </a>
+        </h1>
+    </div>
+    <aside class="text-right">
+        <time pubdate>
+            <: $entry.published_at().strftime( '%Y-%m-%d %H:%M') :>
+        </time>
+    </aside>
+    <: $entry.html_body_without_title() | mark_raw :>
+</article>
