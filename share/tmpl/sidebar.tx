@@ -5,9 +5,9 @@
     <div class="panel-body">
         <nav>
             <ul>
-                <li><a href="<: '/about.html' | uri_for :>">About</a></li>
-                <li><a href="<: '/links.html' | uri_for :>">Links</a></li>
-                <li><a href="<: '/archives.html' | uri_for :>">Archives</a></li>
+                <li><a href="<: '/about.html' | uri_for :>">Kansai.pm とは</a></li>
+                <li><a href="<: '/archives.html' | uri_for :>">記事一覧</a></li>
+                <li><a href="<: '/links.html' | uri_for :>">リンク集</a></li>
             </ul>
         </nav>
     </div>
