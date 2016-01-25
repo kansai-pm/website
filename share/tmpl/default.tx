@@ -6,6 +6,8 @@
 
 : around content -> {
 <article>
-    <: $article.html_body() | mark_raw :>
+    <div class="entry">
+        <: $article.html_body() | mark_raw :>
+    </div>
 </article>
 : }
