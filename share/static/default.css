@@ -1,1 +1,9 @@
 /* kansai.pm.org */
+
+.entry {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+.entry p {
+    margin: 10px 0;
+}
