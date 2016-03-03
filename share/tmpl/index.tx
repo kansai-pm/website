@@ -17,7 +17,7 @@
             : }
         </section>
         <section class="col-md-4">
-            : include 'sidebar.tx' {}
+            : include 'sidebar-index.tx' {}
         </section>
     </div>
 </div>
