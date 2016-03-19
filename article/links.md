@@ -15,3 +15,6 @@ template: default
 
 - [Perl Mongers](http://www.pm.org/)
 - [Perl Mongers: Japan](http://www.pm.org/groups/japan.html)
+
+# アーカイブ（第15回あたりまで）
+- [FrontPage - Kansai.pm](http://perl.jonex.ne.jp/cgi-bin/wiki.cgi)
