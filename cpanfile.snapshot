@@ -672,12 +672,15 @@ DISTRIBUTIONS
     requirements:
       Exporter 5.57
       Module::Build 0.4004
-  MIME-Base32-1.02a
-    pathname: D/DA/DANPEDER/MIME-Base32-1.02a.tar.gz
+  MIME-Base32-1.301
+    pathname: R/RE/REHSACK/MIME-Base32-1.301.tar.gz
     provides:
-      MIME::Base32 1.02
+      MIME::Base32 1.301
     requirements:
+      Exporter 0
       ExtUtils::MakeMaker 0
+      perl 5.008001
+      utf8 0
   Module-Build-0.4214
     pathname: L/LE/LEONT/Module-Build-0.4214.tar.gz
     provides:
@@ -1135,10 +1138,10 @@ DISTRIBUTIONS
       URI::QueryParam 0
       URL::Encode 0
       perl 5.010
-  Riji-v0.9.7
-    pathname: S/SO/SONGMU/Riji-v0.9.7.tar.gz
+  Riji-v0.9.8
+    pathname: S/SO/SONGMU/Riji-v0.9.8.tar.gz
     provides:
-      Riji v0.9.7
+      Riji v0.9.8
       Riji::CLI undef
       Riji::CLI::Help undef
       Riji::CLI::NewEntry undef
@@ -1158,7 +1161,7 @@ DISTRIBUTIONS
       HTTP::Date 0
       IPC::Cmd 0
       List::UtilsBy 0
-      MIME::Base32 0
+      MIME::Base32 1.301
       Module::Build::Tiny 0.035
       Module::Functions 0
       Mouse 0

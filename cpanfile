@@ -1,1 +1,1 @@
-requires "Riji", "v0.9.7";
+requires "Riji", "==v0.9.8";
