@@ -2,9 +2,10 @@ template: default
 ---
 # 関西のPerlの勉強会
 
-- [Perl入学式 | Perl Entrance](http://www.perl-entrance.org/)
-- [#Perl鍋 - connpass](http://perlnabe.connpass.com/)
-- [なにわPerl | Doorkeeper](https://naniwaperl.doorkeeper.jp/)
+- [Perl入学式 プログラミング初心者のためのPerl入門講座](http://www.perl-entrance.org/)
+    - [Perl入学式in大阪 - connpass](https://perl-entrance-osaka.connpass.com/)
+- [#Perl鍋 - connpass](https://perlnabe.connpass.com/)
+- [なにわPerl - connpass](https://naniwaperl.connpass.com/)
 - [Kansai::Tiny.pm | Doorkeeper](https://kansai-tiny.doorkeeper.jp/)
 
 コミュニティページのある勉強会は是非お知らせください。
