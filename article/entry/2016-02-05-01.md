@@ -15,7 +15,7 @@ Kansai.pmの若林（[@nqounet](https://twitter.com/nqounet)）です。
 
 参加の申し込みページは現在準備中です。しばらくお待ちください。
 
-<a data-width="600" class="doorkeeper-registration-widget" href="https://kansai-perl-mongers.doorkeeper.jp/events/38920">第16回ミーティング</a><script src="http://widgets.doorkeeper.jp/w/widget.js"></script>
+<a data-width="600" class="doorkeeper-registration-widget" href="https://kansai-perl-mongers.doorkeeper.jp/events/38920">第16回ミーティング</a><script src="https://widgets.doorkeeper.jp/w/widget.js"></script>
 
 スピーカーは募集しております。（応募には[github](https://github.com)のアカウントが必要です）
 
